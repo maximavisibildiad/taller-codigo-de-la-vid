@@ -448,7 +448,7 @@ footer{background:var(--noche);color:#C9D3F0;padding:30px 0;font-size:15px;text-
 
 <footer><div class="wrap">Código de la Vid · Taller 1: Tu cuerpo habla, ¡escúchalo! · <span data-cfg="organiza"></span></div></footer>
 
-<div class="barra"><span><b data-cfg="fecha"></b></span><a class="btn" href="#inscripcion" data-wa>Quiero mi cupo</a></div>
+<div class="barra"><span><b data-cfg="fecha" data-vacio="Taller de 3 horas"></b></span><a class="btn" href="#inscripcion" data-wa>Quiero mi cupo</a></div>
 
 <script>
 /* Datos del evento: completar y listo. Lo vacío se muestra como [pendiente]. */
@@ -464,7 +464,7 @@ const EVENTO = {
 document.querySelectorAll("[data-cfg]").forEach(el => {
   const v = EVENTO[el.dataset.cfg];
   if (v) el.textContent = v;
-  else { el.textContent = "Por confirmar"; }
+  else { el.textContent = el.dataset.vacio || "Por confirmar"; }
 });
 const IG = "https://www.instagram.com/casafuegodeloalto/";
 document.querySelectorAll("[data-wa]").forEach(a => { a.href = IG; a.target = "_blank"; a.rel = "noopener"; });
