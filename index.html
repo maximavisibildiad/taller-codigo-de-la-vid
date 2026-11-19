@@ -6,188 +6,197 @@
 <title>Tu cuerpo habla, ¡escúchalo! | Taller Código de la Vid</title>
 <meta name="description" content="Taller vivencial de 3 horas para mujeres: aprende a escuchar las señales de tu cuerpo, entender el estrés y responder desde la calma. Taller 1 del ciclo Código de la Vid.">
 <meta property="og:title" content="Tu cuerpo habla, ¡escúchalo! · Taller Código de la Vid">
-<meta property="og:description" content="Tres horas para dejar el piloto automático, entender qué le pasa a tu cuerpo con el estrés y volver a la calma. Un espacio para mujeres.">
-<meta property="og:image" content="img/maria-fernanda.jpg">
+<meta property="og:description" content="Del estrés a la calma. Tres horas para dejar el piloto automático, entender qué le pasa a tu cuerpo con el estrés y volver a la calma. Un espacio para mujeres.">
+<meta property="og:image" content="img/portada.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif:ital@0;1&family=Pinyon+Script&display=swap" rel="stylesheet">
 <style>
 :root{
-  --noche:#0F1C3F;      /* azul profundo: fondos oscuros */
-  --noche-2:#1A2C5C;
-  --azul:#1E46E6;       /* azul eléctrico de las piezas */
-  --fuego:#EE4B2B;      /* coral del logo */
-  --brasa:#F68A3C;      /* naranja del logo */
-  --agua:#1FA9B8;       /* turquesa del logo */
-  --crema:#F7ECDF;      /* fondo del logo */
-  --papel:#FFFAF4;
-  --tinta:#1C1C22;
-  --tinta-suave:#3D3D47;
-  --degrade:linear-gradient(120deg,#EE4B2B 0%,#F68A3C 45%,#1FA9B8 100%);
-  --r:20px;
+  --vino:#4C1C2C;        /* fondos oscuros y tinta de titulares */
+  --vino-2:#471D29;
+  --rosa:#F5DEE4;        /* fondo rosa pastel */
+  --rosa-card:#EDC9D3;   /* tarjetas rosa medio */
+  --azul-card:#BCCEDC;   /* tarjetas azul polvo */
+  --crema:#F6EFE5;       /* fondo crema */
+  --pill:#FCEDE8;
+  --texto:#34121F;       /* cuerpo sobre claro */
+  --acento:#7A2F47;      /* etiquetas */
+  --foco:#4C1C2C;
+  --raya:rgba(237,201,211,.2);
+  --r:28px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-body{font-family:Figtree,system-ui,sans-serif;font-weight:500;color:var(--tinta);background:var(--crema);font-size:20px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{font-family:"DM Sans",system-ui,sans-serif;font-weight:400;color:var(--texto);background:var(--crema);font-size:20px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--brasa);outline-offset:3px;border-radius:6px}
-.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,sans-serif;font-weight:800;line-height:1.05;color:var(--noche);letter-spacing:-.02em}
-h2{font-size:clamp(36px,5.2vw,60px);margin-bottom:20px}
-h3{font-size:clamp(24px,2.6vw,30px);font-weight:700}
+:focus-visible{outline:3px solid var(--foco);outline-offset:3px;border-radius:8px}
+.oscuro :focus-visible,.hero-barra:focus-visible{outline-color:var(--pill)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
+h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;font-weight:400;line-height:1.02;color:var(--vino);letter-spacing:-.01em}
+h2{font-size:clamp(44px,6vw,76px);margin-bottom:22px}
+h3{font-size:clamp(32px,3.4vw,40px);line-height:1.08}
 p{max-width:60ch}
-.lead{font-size:clamp(20px,2.1vw,23px);color:var(--tinta-suave)}
-.pend{background:#FFE27A;color:#4a3800;padding:0 6px;border-radius:5px;font-weight:700;font-size:.9em}
+.lead{font-size:clamp(20px,2vw,23px);color:var(--texto)}
+.etiqueta{font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:var(--acento);margin-bottom:14px;display:block}
+.script{font-family:"Pinyon Script","Snell Roundhand",cursive;font-weight:400;letter-spacing:0;line-height:1.1}
+.tag{display:inline-block;transform:rotate(-4deg);background:var(--pill);border:2px solid var(--vino);color:var(--vino);border-radius:999px;padding:9px 20px;font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.deco{position:absolute;pointer-events:none;z-index:0;height:auto}
+.oscuro{background-color:var(--vino);background-image:repeating-linear-gradient(90deg,transparent 0 38px,var(--raya) 38px 40px);color:var(--crema);position:relative;overflow:hidden}
+.oscuro h2,.oscuro h3{color:var(--crema)}
+.oscuro .etiqueta{color:var(--rosa-card)}
+section,header,footer{position:relative;overflow:hidden}
 
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--degrade);color:#fff;text-decoration:none;font-weight:700;font-size:19px;padding:18px 32px;border-radius:999px;transition:transform .2s,filter .2s;box-shadow:0 12px 30px -12px rgba(238,75,43,.75)}
-.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
-.btn svg{width:22px;height:22px}
-.btn-claro{background:#fff;color:var(--noche);box-shadow:0 12px 30px -12px rgba(0,0,0,.4)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--vino);color:var(--crema);text-decoration:none;font-weight:700;font-size:19px;padding:18px 34px;border-radius:999px;transition:transform .2s,background .2s;letter-spacing:.01em}
+.btn:hover{transform:translateY(-2px);background:#6a2a40}
+.btn svg{width:22px;height:22px;flex:none}
+.btn-claro{background:var(--rosa-card);color:var(--vino)}
+.btn-claro:hover{background:var(--pill)}
 
 /* HERO */
-.hero{background:var(--noche);color:#fff;position:relative;overflow:hidden;padding:28px 0 0}
-.hero .top{display:flex;justify-content:space-between;align-items:center;font-size:16px;color:#C9D3F0;gap:12px;flex-wrap:wrap}
-.hero .top strong{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:21px;color:#fff}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:end;padding-top:56px}
-.hero h1{color:#fff;font-size:clamp(54px,8.6vw,116px)}
-.hero h1 span{display:block;background:var(--degrade);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
-.hero .sub{font-size:clamp(20px,2.1vw,24px);color:#fff;margin:26px 0 34px;max-width:32ch;font-weight:500}
-.datos{display:flex;flex-wrap:wrap;gap:12px 30px;margin-top:30px;padding:22px 0 64px;font-size:16px;color:#C9D3F0}
-.datos div b{display:block;color:#fff;font-weight:700;font-size:19px}
-.hero-fotos{position:relative;height:100%;min-height:460px}
-.hero-fotos img{position:absolute;object-fit:cover;border-radius:220px 220px 24px 24px;border:5px solid var(--noche)}
-.hero-fotos .f1{width:62%;height:410px;right:0;bottom:0;object-position:center 20%}
-.hero-fotos .f2{width:44%;height:280px;left:0;bottom:40px;object-position:58% 15%}
-.hero-fotos .f3{width:38%;height:230px;left:22%;top:0;object-position:center 15%}
-.vid-hero{position:absolute;inset:0;pointer-events:none;opacity:.7}
-.vid-hero path{fill:none;stroke:url(#g);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:2600;stroke-dashoffset:2600;animation:crecer 3.2s ease-out .3s forwards}
-.vid-hero .uva{fill:var(--brasa);opacity:0;animation:aparecer .6s ease-out forwards}
-@keyframes crecer{to{stroke-dashoffset:0}}
-@keyframes aparecer{to{opacity:.9}}
+.hero{background:var(--rosa);padding:30px 0 80px}
+.hero-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-weight:500;font-size:17px;color:var(--vino)}
+.hero-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center;padding-top:48px}
+.kicker{font-size:clamp(34px,3.6vw,46px);color:var(--acento);margin-bottom:6px;display:block}
+.hero h1{font-size:clamp(60px,8vw,112px);line-height:.96}
+.hero h1 .script{display:block;font-size:1.04em;color:var(--acento);margin-top:.04em}
+.hero .sub{font-size:clamp(20px,2vw,23px);margin:26px 0 32px;max-width:34ch;color:var(--texto)}
+.poster{position:relative}
+.poster img.foto{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 50%;border-radius:var(--r);box-shadow:0 30px 60px -34px rgba(76,28,44,.6)}
+.poster .tag{position:absolute;top:-18px;right:-8px;transform:rotate(5deg)}
+.datos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:40px}
+@media (min-width:981px){.hero .datos{grid-template-columns:1.25fr .95fr 1.7fr .8fr 1.35fr}.hero .dato.ancho{grid-column:auto}}
+.dato{background:var(--pill);border-radius:20px;padding:14px 18px}
+.dato.ancho{grid-column:1/-1}
+.dato small{display:block;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--acento)}
+.dato b{display:block;font-weight:700;font-size:19px;color:var(--vino);line-height:1.35}
+.incluye{margin-top:14px;font-weight:500;font-size:19px;color:var(--vino)}
+.incluye::before{content:"✱ ";color:var(--acento)}
 
 /* PREGUNTA */
-.pregunta{padding:110px 0 90px}
-.pregunta blockquote{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;letter-spacing:-.02em;font-size:clamp(32px,4.6vw,56px);line-height:1.1;color:var(--noche);max-width:20ch}
-.senales{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:56px}
-.senal{border-top:4px solid var(--fuego);padding-top:16px}
-.senal:nth-child(2){border-color:var(--brasa)}.senal:nth-child(3){border-color:var(--agua)}.senal:nth-child(4){border-color:var(--azul)}
-.senal b{display:block;font-size:21px;color:var(--noche);margin-bottom:4px;font-weight:700}
-.senal span{color:var(--tinta-suave);font-size:18px}
-.pregunta .cierre{margin-top:46px;font-size:23px}
-.pregunta .cierre strong{color:var(--fuego)}
+.pregunta{padding:120px 0 100px}
+.pregunta blockquote{font-family:"Instrument Serif",serif;font-size:clamp(40px,5.6vw,72px);line-height:1.06;color:var(--crema);max-width:19ch}
+.senales{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:60px}
+.senal{background:rgba(246,239,229,.08);border:2px solid rgba(237,201,211,.35);border-radius:22px;padding:22px}
+.senal b{display:block;font-size:21px;color:var(--rosa-card);margin-bottom:6px;font-weight:700;line-height:1.3}
+.senal span{color:var(--crema);font-size:19px}
+.pregunta .cierre{margin-top:48px;font-size:clamp(21px,2.2vw,25px);max-width:52ch;color:var(--crema)}
+.pregunta .cierre strong{color:var(--rosa-card);font-weight:700}
 
-/* VERSICULO */
-.codigo{background:var(--papel);padding:100px 0}
-.codigo-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.versiculo{font-size:clamp(24px,2.8vw,32px);line-height:1.35;color:var(--noche);font-weight:600;border-left:6px solid var(--agua);padding-left:22px}
-.versiculo cite{display:block;font-style:normal;font-size:17px;color:var(--agua);font-weight:700;margin-top:14px}
-.vs{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r);overflow:hidden}
-.vs>div{padding:28px}
-.vs .roble{background:#ECE6DE}
-.vs .vid{background:var(--noche);color:#fff}
-.vs h3{font-size:26px;margin-bottom:14px}
-.vs .vid h3{color:#fff}
-.vs ul{list-style:none;font-size:18px}
-.vs li{padding:10px 0;border-top:1px solid rgba(0,0,0,.1)}
-.vs .vid li{border-color:rgba(255,255,255,.15)}
-.vs li i{font-style:normal;display:block;font-size:14px;font-weight:700;color:var(--fuego)}
-.vs .vid li i{color:var(--brasa)}
-.vs .roble h3{color:#6a625b}
+/* CODIGO */
+.codigo{padding:110px 0}
+.codigo-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.versiculo{font-family:"Instrument Serif",serif;font-size:clamp(28px,3vw,36px);line-height:1.2;color:var(--vino);border-left:4px solid var(--rosa-card);padding-left:22px;margin-bottom:26px}
+.versiculo cite{display:block;font-family:"DM Sans",sans-serif;font-style:normal;font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:var(--acento);font-weight:700;margin-top:14px}
+.imagen-vid{margin-top:34px;border-radius:var(--r);width:100%;aspect-ratio:16/10;object-fit:cover}
+.vs{display:grid;gap:20px}
+.vs>div{padding:34px;border-radius:var(--r)}
+.vs .roble{background:var(--azul-card)}
+.vs .vid{background:var(--rosa-card)}
+.vs h3{margin-bottom:16px}
+.vs ul{list-style:none;font-size:20px}
+.vs li{padding:12px 0;border-top:1px solid rgba(76,28,44,.22)}
+.vs li i{font-style:normal;display:block;font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--vino)}
 
 /* RECORRIDO */
-.recorrido{padding:110px 0 80px}
-.recorrido .intro{max-width:700px;margin-bottom:60px}
-.camino{position:relative;padding-left:90px}
-.tallo{position:absolute;left:30px;top:0;bottom:0;width:40px}
-.tallo path{fill:none;stroke:url(#g2);stroke-width:4;stroke-linecap:round}
-.paso{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:0 0 80px}
-.paso .nodo{position:absolute;left:-78px;top:4px;width:56px;height:56px;border-radius:50%;background:var(--degrade);color:#fff;display:grid;place-items:center;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:26px;border:4px solid var(--crema)}
-.paso .verbo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;letter-spacing:-.03em;font-size:clamp(46px,6.4vw,80px);line-height:1;color:var(--noche)}
-.paso .tema{font-weight:700;color:var(--fuego);margin:12px 0 14px;font-size:21px}
-.paso p{color:var(--tinta-suave)}
-.lleva{background:#fff;border-radius:var(--r);padding:30px;box-shadow:0 18px 40px -28px rgba(15,28,63,.45)}
-.lleva h4{font-size:16px;font-weight:800;color:var(--agua);margin-bottom:12px}
+.recorrido{padding:110px 0 40px}
+.recorrido .intro{max-width:700px;margin-bottom:70px}
+.recorrido .lead{color:var(--crema)}
+.paso{display:grid;grid-template-columns:260px 1fr;gap:26px 56px;align-items:start;padding:0 0 90px;position:relative}
+.paso .arco{grid-row:1/3}
+.paso .lleva{max-width:640px}
+.arco{width:260px;height:310px;background:var(--rosa-card);border-radius:130px 130px 28px 28px;display:grid;place-items:center;font-family:"Instrument Serif",serif;font-size:140px;color:var(--vino);line-height:1}
+.hora{display:block;font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:var(--rosa-card);margin-bottom:6px}
+.paso .verbo{font-size:clamp(68px,7.6vw,104px);color:var(--crema);margin-bottom:10px}
+.paso .tema{font-family:"Instrument Serif",serif;font-size:clamp(28px,2.8vw,34px);line-height:1.1;color:var(--rosa-card);margin-bottom:14px}
+.paso p{color:var(--crema)}
+.lleva{background:var(--pill);color:var(--texto);border-radius:var(--r);padding:30px}
+.lleva h4{font-size:15px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--acento);margin-bottom:10px}
 .lleva ul{list-style:none}
-.lleva li{padding:8px 0 8px 30px;position:relative;font-size:19px}
-.lleva li::before{content:"";position:absolute;left:0;top:17px;width:14px;height:14px;border-radius:50%;background:var(--degrade)}
+.lleva li{padding:9px 0 9px 36px;position:relative;font-size:19px;line-height:1.5}
+.lleva li::before{content:"";position:absolute;left:0;top:14px;width:20px;height:20px;border-radius:50%;background:var(--vino)}
+.lleva li::after{content:"";position:absolute;left:6px;top:20px;width:8px;height:8px;border-radius:50%;background:var(--rosa-card)}
 
 /* FRUTO */
-.fruto{background:var(--noche);color:#fff;padding:100px 0}
-.fruto h2{color:#fff}
-.fruto .lead{color:#DCE3F7}
+.fruto{background:var(--rosa);padding:110px 0}
 .racimo{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
-.grano{background:var(--noche-2);border-radius:var(--r);padding:30px;border-top:5px solid var(--fuego)}
-.grano:nth-child(2){border-color:var(--brasa)}.grano:nth-child(3){border-color:var(--agua)}
-.grano svg{width:42px;height:42px;margin-bottom:14px}
-.grano svg *{stroke:#fff}
-.grano svg circle[fill="#C7D69A"]{fill:#fff}
-.grano h3{color:#fff;font-size:25px;margin-bottom:8px}
-.grano p{color:#DCE3F7;font-size:18px}
+.grano{background:var(--rosa-card);border-radius:var(--r);padding:34px}
+.grano:nth-child(2){background:var(--azul-card)}
+.grano svg{width:48px;height:48px;margin-bottom:16px}
+.grano h3{font-size:clamp(32px,3vw,38px);margin-bottom:10px}
+.grano p{font-size:19px}
 
 /* EXPERIENCIA */
-.experiencia{padding:100px 0}
+.experiencia{padding:110px 0}
 .exp-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
-.exp-lista div{display:grid;grid-template-columns:160px 1fr;gap:20px;padding:22px 0;border-top:2px solid #E6D6C3}
-.exp-lista b{color:var(--fuego);font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:23px;line-height:1.2}
-.exp-lista span{color:var(--tinta-suave);font-size:19px}
+.exp-lista{display:grid;gap:14px}
+.exp-lista div{display:grid;grid-template-columns:170px 1fr;gap:20px;align-items:start;background:var(--rosa);border-radius:24px;padding:22px 26px}
+.exp-lista div:nth-child(even){background:#E4EBF1}
+.exp-lista b{font-family:"Instrument Serif",serif;font-weight:400;font-size:32px;line-height:1.05;color:var(--vino)}
+.exp-lista span{font-size:19px}
 
 /* FACILITADORAS */
-.facis{background:var(--papel);padding:110px 0}
+.facis{background:var(--rosa);padding:110px 0}
 .facis .intro{max-width:640px;margin-bottom:56px}
 .faci-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.faci figure{margin:0;padding:6px;border-radius:220px 220px 26px 26px;background:var(--degrade)}
-.faci img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:214px 214px var(--r) var(--r);background:#ddd}
-.faci .rol{color:var(--agua);font-weight:800;font-size:16px;margin:22px 0 4px}
-.faci h3{margin-bottom:10px}
-.faci p{font-size:18px;color:var(--tinta-suave)}
-.faci .momento{display:inline-block;margin-top:16px;font-size:15px;color:#fff;background:var(--noche);font-weight:700;padding:6px 14px;border-radius:999px}
+.faci figure{margin:0;padding:10px;border-radius:260px 260px 30px 30px;background:var(--rosa-card)}
+.faci img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:250px 250px 22px 22px;background:#ddd}
+.faci .rol{display:inline-block;color:var(--acento);font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;margin:24px 0 6px}
+.faci h3{margin-bottom:12px}
+.faci p{font-size:19px}
+.faci .momento{display:inline-block;margin-top:16px;font-size:16px;color:var(--vino);background:var(--pill);font-weight:700;padding:8px 16px;border-radius:999px;border:2px solid var(--vino)}
 
 /* PARA QUIEN */
-.para{padding:100px 0}
-.para-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.caja{border-radius:var(--r);padding:38px;background:#fff}
-.caja.verde{background:var(--noche);color:#fff}
-.caja.verde h3{color:#fff}
-.caja ul{list-style:none;margin-top:14px}
-.caja li{padding:11px 0;border-top:1px solid rgba(0,0,0,.08);font-size:19px}
-.caja.verde li{border-color:rgba(255,255,255,.15)}
-.aviso{margin-top:26px;font-size:16px;color:var(--tinta-suave);max-width:none}
-.caja.verde .aviso{color:#C9D3F0}
+.para{padding:110px 0}
+.para-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.caja{border-radius:var(--r);padding:40px;background:var(--azul-card)}
+.caja.rosa{background:var(--rosa-card)}
+.caja ul{list-style:none;margin-top:16px}
+.caja li{padding:12px 0;border-top:1px solid rgba(76,28,44,.22);font-size:20px}
+.aviso{margin-top:26px;font-size:18px;color:var(--texto);max-width:none}
 
 /* CTA FINAL */
-.final{background:var(--degrade);color:#fff;padding:100px 0;text-align:center}
-.final h2{color:#fff;max-width:18ch;margin:0 auto 20px}
+.final{padding:120px 0;text-align:center}
+.final h2{max-width:17ch;margin:0 auto 22px}
 .final p{margin:0 auto 34px}
-.final .lead{color:#fff!important}
-.final .datos{justify-content:center;padding-bottom:0;color:#fff}
-footer{background:var(--noche);color:#C9D3F0;padding:30px 0;font-size:15px;text-align:center}
+.final .lead{color:var(--crema)}
+.final .datos{margin:40px auto 0;text-align:left;max-width:720px}
+.final .incluye{color:var(--crema)}
+.final .incluye::before{color:var(--rosa-card)}
+footer{background:var(--vino-2);color:var(--crema);padding:30px 0;font-size:17px;text-align:center}
 .barra{display:none}
 
-@media (max-width:900px){
-  .hero-grid,.codigo-grid,.exp-grid,.para-grid{grid-template-columns:1fr}
-  .hero-fotos{min-height:390px;margin-top:10px}
+@media (max-width:980px){
+  .hero-grid,.codigo-grid,.exp-grid,.para-grid{grid-template-columns:1fr;gap:44px}
   .senales{grid-template-columns:1fr 1fr}
-  .paso{grid-template-columns:1fr;gap:22px}
+  .paso{grid-template-columns:1fr;gap:26px}
+  .paso .arco{grid-row:auto}
+  .arco{width:170px;height:200px;border-radius:85px 85px 22px 22px;font-size:88px}
   .racimo,.faci-grid{grid-template-columns:1fr}
   .faci-grid{gap:50px}
-  .faci figure{max-width:420px}
+  .faci figure{max-width:440px}
+  .poster .tag{right:8px}
 }
 @media (max-width:600px){
   body{font-size:18px}
   .wrap{padding:0 16px}
-  .camino{padding-left:58px}
-  .tallo{left:12px}
-  .paso .nodo{left:-60px;width:46px;height:46px;font-size:21px}
-  .vs{grid-template-columns:1fr}
+  .hero{padding:22px 0 60px}
+  .hero-grid{padding-top:36px}
+  .datos{grid-template-columns:1fr}
   .senales{grid-template-columns:1fr}
-  .exp-lista div{grid-template-columns:1fr;gap:4px}
-  .hero-fotos .f1{height:330px}
-  .hero-fotos .f2{height:220px}
-  .hero-fotos .f3{height:180px}
-  .barra{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--noche);padding:12px 16px;gap:12px;align-items:center;justify-content:space-between;color:#fff;font-size:15px;box-shadow:0 -8px 24px rgba(0,0,0,.25)}
-  .barra .btn{padding:12px 20px;font-size:16px}
+  .exp-lista div{grid-template-columns:1fr;gap:6px}
+  .vs>div,.caja,.lleva,.grano{padding:26px}
+  .pregunta,.codigo,.experiencia,.facis,.para,.fruto{padding-top:80px;padding-bottom:80px}
+  .recorrido{padding-top:80px}
+  .final{padding:90px 0 110px}
+  .lead,.lleva li,.exp-lista span,.faci p,.grano p,.caja li,.vs ul,.senal span{font-size:18px}
+  .tag{font-size:13px;padding:8px 14px}
+  .poster .tag{top:-16px}
+  .deco-m{display:none}
+  .barra{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--vino);padding:10px 16px;gap:12px;align-items:center;justify-content:space-between;color:var(--crema);font-size:17px;font-weight:700;box-shadow:0 -8px 24px rgba(0,0,0,.25)}
+  .barra .btn{white-space:nowrap;padding:12px 22px;font-size:17px;background:var(--rosa-card);color:var(--vino)}
   footer{padding-bottom:90px}
 }
 </style>
@@ -195,41 +204,40 @@ footer{background:var(--noche);color:#C9D3F0;padding:30px 0;font-size:15px;text-
 <body>
 
 <header class="hero">
-  <svg class="vid-hero" viewBox="0 0 1200 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#EE4B2B"/><stop offset=".5" stop-color="#F68A3C"/><stop offset="1" stop-color="#1FA9B8"/></linearGradient></defs>
-    <path d="M-40 120 C 180 60, 260 260, 420 210 S 640 40, 760 160 S 980 330, 1240 220"/>
-    <path d="M300 205 c 20 40 10 80 -20 100 M760 160 c-30 30 -30 70 0 95 M1000 290 c 25 25 25 60 0 85"/>
-    <circle class="uva" cx="282" cy="318" r="9" style="animation-delay:2.2s"/><circle class="uva" cx="298" cy="334" r="9" style="animation-delay:2.3s"/><circle class="uva" cx="270" cy="338" r="9" style="animation-delay:2.4s"/>
-    <circle class="uva" cx="762" cy="268" r="9" style="animation-delay:2.6s"/><circle class="uva" cx="778" cy="284" r="9" style="animation-delay:2.7s"/><circle class="uva" cx="750" cy="288" r="9" style="animation-delay:2.8s"/>
-  </svg>
-  <div class="wrap" style="position:relative">
-    <div class="top"><strong>Código de la Vid</strong><span>Taller 1 del ciclo</span></div>
+  <img class="deco deco-m" src="img/flor-vino.png" alt="" style="left:-30px;bottom:-40px;width:190px;transform:rotate(-8deg)">
+  <img class="deco deco-m" src="img/petalo-vino.png" alt="" style="left:46%;bottom:14px;width:90px;transform:rotate(12deg)">
+  <div class="wrap">
+    <div class="hero-top"><span class="tag">✱ Código de la Vid</span><span>Taller 1 del ciclo</span></div>
     <div class="hero-grid">
       <div>
-        <h1>Tu cuerpo habla. <span>¡Escúchalo!</span></h1>
+        <span class="kicker script">Del estrés a la calma</span>
+        <h1>Tu cuerpo habla. <span class="script">¡Escúchalo!</span></h1>
         <p class="sub">Tres horas para salir del piloto automático, entender qué le pasa a tu cuerpo cuando vives en alerta y aprender a volver a la calma.</p>
         <a class="btn" href="#inscripcion" data-wa>
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>
           Quiero mi cupo
         </a>
-        <div class="datos">
-          <div><b data-cfg="fecha"></b>Fecha</div>
-          <div><b>3 horas</b><span data-cfg="hora"></span></div>
-          <div><b data-cfg="lugar"></b>Lugar</div>
-          <div><b data-cfg="precio"></b>Inversión</div>
-        </div>
       </div>
-      <div class="hero-fotos" aria-hidden="true">
-        <img class="f3" src="img/angelica.jpg" alt="">
-        <img class="f2" src="img/valentina.jpg" alt="">
-        <img class="f1" src="img/maria-fernanda.jpg" alt="">
+      <div class="poster">
+        <img class="foto" src="img/portada.jpg" alt="Peonia en flor con el título del taller: Del estrés a la calma. Escucha tu cuerpo, regula tu energía y vive con equilibrio.">
       </div>
+    </div>
+    <div class="datos">
+      <div class="dato"><small>Fecha</small><b data-cfg="fecha"></b></div>
+      <div class="dato"><small>Hora</small><b data-cfg="hora"></b></div>
+      <div class="dato ancho"><small>Lugar</small><b data-cfg="lugar"></b></div>
+      <div class="dato"><small>Inversión</small><b data-cfg="precio"></b></div>
+      <div class="dato"><small>Incluye</small><b data-cfg="incluye"></b></div>
     </div>
   </div>
 </header>
 
 <main>
-<section class="pregunta">
+<section class="pregunta oscuro">
+  <img class="deco deco-m" src="img/dalia.png" alt="" style="right:4%;top:50px;width:230px">
+  <img class="deco deco-m" src="img/petalo-rosa.png" alt="" style="right:10%;bottom:70px;width:140px;transform:rotate(-10deg)">
   <div class="wrap">
+    <span class="etiqueta">La pregunta de hoy</span>
     <blockquote>¿Y si el problema no fuera solo todo lo que estás viviendo, sino que aprendiste a vivir sin escucharte?</blockquote>
     <div class="senales">
       <div class="senal"><b>Ese dolor de cabeza</b><span>que ya tomas como parte del día.</span></div>
@@ -244,9 +252,11 @@ footer{background:var(--noche);color:#C9D3F0;padding:30px 0;font-size:15px;text-
 <section class="codigo">
   <div class="wrap codigo-grid">
     <div>
+      <span class="etiqueta">Activando el código</span>
       <h2>Fuiste llamada a dar fruto, no a resistirlo todo.</h2>
       <p class="versiculo">«Yo soy la vid y ustedes los pámpanos; el que permanece en mí, y yo en él, éste lleva mucho fruto.»<cite>Juan 15:5</cite></p>
-      <p class="lead" style="margin-top:24px">El pámpano no se estresa por fabricar uvas: permanece unido a la vid y el fruto llega. Ese es el Código de la Vid, el diseño original para vivir en plenitud.</p>
+      <p class="lead">El pámpano no se estresa por fabricar uvas: permanece unido a la vid y el fruto llega. Ese es el Código de la Vid, el diseño original para vivir en plenitud.</p>
+      <img class="imagen-vid" src="img/yo-soy-la-vid.jpg" alt="Juan 15:5: Yo soy la vid y ustedes los pámpanos" loading="lazy">
     </div>
     <div class="vs" role="table" aria-label="Vivir como roble o como vid">
       <div class="roble">
@@ -271,86 +281,88 @@ footer{background:var(--noche);color:#C9D3F0;padding:30px 0;font-size:15px;text-
   </div>
 </section>
 
-<section class="recorrido" id="recorrido">
+<section class="recorrido oscuro" id="recorrido">
+  <img class="deco deco-m" src="img/peonia-2.png" alt="" style="right:3%;top:40px;width:200px;transform:rotate(8deg)">
   <div class="wrap">
     <div class="intro">
       <h2>Un recorrido de tres pasos</h2>
       <p class="lead">Vivencial, práctico y espiritual. Cada hora tiene una pregunta y una herramienta que te llevas a casa.</p>
     </div>
-    <div class="camino">
-      <svg class="tallo" viewBox="0 0 40 1000" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EE4B2B"/><stop offset=".5" stop-color="#F68A3C"/><stop offset="1" stop-color="#1FA9B8"/></linearGradient></defs><path d="M20 0 C 36 120, 4 240, 20 360 S 36 600, 20 720 S 4 900, 20 1000"/></svg>
 
-      <div class="paso">
-        <div class="nodo">1</div>
-        <div>
-          <div class="verbo">Reconocer</div>
-          <div class="tema">¿Cómo estoy viviendo realmente?</div>
-          <p>Ponemos sobre la mesa todo lo que cargas: trabajo, casa, hijos, cuentas y la presión de ser perfecta. Descubrimos por qué el servicio sin pausa se vuelve agotamiento, y qué nos enseñan Marta y María sobre el afán.</p>
-        </div>
-        <div class="lleva">
-          <h4>Te llevas</h4>
-          <ul>
-            <li>Una foto honesta de cómo llegas hoy, en cuerpo y mente</li>
-            <li>Claridad sobre las cargas que no te tocaba llevar sola</li>
-            <li>Permiso para soltar el papel de la mujer que puede con todo</li>
-          </ul>
-        </div>
+    <div class="paso">
+      <div class="arco" aria-hidden="true">01</div>
+      <div>
+        <span class="hora">Primera hora · 9:00 – 10:00 a. m.</span>
+        <div class="verbo script">Reconocer</div>
+        <div class="tema">¿Cómo estoy viviendo realmente?</div>
+        <p>Ponemos sobre la mesa todo lo que cargas: trabajo, casa, hijos, cuentas y la presión de ser perfecta. Descubrimos por qué el servicio sin pausa se vuelve agotamiento, y qué nos enseñan Marta y María sobre el afán.</p>
       </div>
-
-      <div class="paso">
-        <div class="nodo">2</div>
-        <div>
-          <div class="verbo">Comprender</div>
-          <div class="tema">¿Qué pasa dentro de mí con el miedo y el estrés?</div>
-          <p>Con la historia del perro feroz entiendes, de forma sencilla, cómo tu cerebro enciende la alarma y cómo la apaga. Y por qué las deudas, las discusiones o el «¿y si algo malo pasa?» la dejan prendida.</p>
-        </div>
-        <div class="lleva">
-          <h4>Te llevas</h4>
-          <ul>
-            <li>Tu mapa de alerta: qué te activa, qué sientes y qué necesitas</li>
-            <li>La pausa de 3 minutos para bajar la alarma en cualquier lugar</li>
-            <li>Una forma nueva de responder en vez de reaccionar</li>
-          </ul>
-        </div>
+      <div class="lleva">
+        <h4>Te llevas</h4>
+        <ul>
+          <li>Una foto honesta de cómo llegas hoy, en cuerpo y mente</li>
+          <li>Claridad sobre las cargas que no te tocaba llevar sola</li>
+          <li>Permiso para soltar el papel de la mujer que puede con todo</li>
+        </ul>
       </div>
+    </div>
 
-      <div class="paso" style="padding-bottom:0">
-        <div class="nodo">3</div>
-        <div>
-          <div class="verbo">Transformar</div>
-          <div class="tema">De sobrevivir a vivir con propósito</div>
-          <p>Descanso físico, mental y espiritual como diseño de Dios. Dos claves para cambiar tu relación con el estrés: encontrar el propósito de lo que haces y aprender a poner límites sin culpa.</p>
-        </div>
-        <div class="lleva">
-          <h4>Te llevas</h4>
-          <ul>
-            <li>Tu carga, tu propósito y un límite sano escritos de tu puño y letra</li>
-            <li>Un ejercicio de calma para volver a tu espacio seguro</li>
-            <li>Un compromiso personal para empezar esta misma semana</li>
-          </ul>
-        </div>
+    <div class="paso">
+      <div class="arco" aria-hidden="true">02</div>
+      <div>
+        <span class="hora">Segunda hora · 10:00 – 11:00 a. m.</span>
+        <div class="verbo script">Comprender</div>
+        <div class="tema">¿Qué pasa dentro de mí con el miedo y el estrés?</div>
+        <p>Con la historia del perro feroz entiendes, de forma sencilla, cómo tu cerebro enciende la alarma y cómo la apaga. Y por qué las deudas, las discusiones o el «¿y si algo malo pasa?» la dejan prendida.</p>
+      </div>
+      <div class="lleva">
+        <h4>Te llevas</h4>
+        <ul>
+          <li>Tu mapa de alerta: qué te activa, qué sientes y qué necesitas</li>
+          <li>La pausa de 3 minutos para bajar la alarma en cualquier lugar</li>
+          <li>Una forma nueva de responder en vez de reaccionar</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="paso">
+      <div class="arco" aria-hidden="true">03</div>
+      <div>
+        <span class="hora">Tercera hora</span>
+        <div class="verbo script">Transformar</div>
+        <div class="tema">De sobrevivir a vivir con propósito</div>
+        <p>Descanso físico, mental y espiritual como diseño de Dios. Dos claves para cambiar tu relación con el estrés: encontrar el propósito de lo que haces y aprender a poner límites sin culpa.</p>
+      </div>
+      <div class="lleva">
+        <h4>Te llevas</h4>
+        <ul>
+          <li>Tu carga, tu propósito y un límite sano escritos de tu puño y letra</li>
+          <li>Un ejercicio de calma para volver a tu espacio seguro</li>
+          <li>Un compromiso personal para empezar esta misma semana</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
 <section class="fruto">
+  <img class="deco deco-m" src="img/flor-vino.png" alt="" style="right:-30px;top:30px;width:200px;transform:rotate(14deg) scaleX(-1)">
   <div class="wrap">
     <h2>Con qué sales del taller</h2>
     <p class="lead">No te vas solo con información. Te vas con herramientas y con una decisión.</p>
     <div class="racimo">
       <div class="grano">
-        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="none" stroke="#C7D69A" stroke-width="2"/><path d="M12 22c3 4 13 4 16 0" stroke="#C7D69A" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="none" stroke="#4C1C2C" stroke-width="2"/><path d="M12 22c3 4 13 4 16 0" stroke="#4C1C2C" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
         <h3>Escuchar tu cuerpo</h3>
         <p>Reconocer las señales de cansancio y tensión antes de que se conviertan en agotamiento.</p>
       </div>
       <div class="grano">
-        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 24c6-10 22-10 28 0" stroke="#C7D69A" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="20" cy="26" r="3" fill="#C7D69A"/></svg>
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 24c6-10 22-10 28 0" stroke="#4C1C2C" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="20" cy="26" r="3" fill="#4C1C2C"/></svg>
         <h3>Bajar la alarma</h3>
         <p>Ejercicios de respiración, pausa y calma que puedes usar en la casa, la oficina o el carro.</p>
       </div>
       <div class="grano">
-        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 34V12M20 12c0-6 8-8 10-6-2 6-8 7-10 6Zm0 6c0-5-7-7-9-5 2 5 7 6 9 5Z" stroke="#C7D69A" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 34V12M20 12c0-6 8-8 10-6-2 6-8 7-10 6Zm0 6c0-5-7-7-9-5 2 5 7 6 9 5Z" stroke="#4C1C2C" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
         <h3>Vivir conectada</h3>
         <p>Un plan sencillo de descanso y límites, sostenido desde tu relación con Dios.</p>
       </div>
@@ -375,6 +387,7 @@ footer{background:var(--noche);color:#C9D3F0;padding:30px 0;font-size:15px;text-
 </section>
 
 <section class="facis" id="facilitadoras">
+  <img class="deco deco-m" src="img/petalo-vino.png" alt="" style="right:6%;top:50px;width:110px;transform:rotate(-14deg)">
   <div class="wrap">
     <div class="intro">
       <h2>Quiénes te acompañan</h2>
@@ -418,7 +431,7 @@ footer{background:var(--noche);color:#C9D3F0;padding:30px 0;font-size:15px;text-
       </ul>
       <p class="aviso">Para mujeres cristianas y no cristianas. No necesitas experiencia previa.</p>
     </div>
-    <div class="caja verde">
+    <div class="caja rosa">
       <h3>Qué traer</h3>
       <ul>
         <li>Ropa cómoda y tenis</li>
@@ -431,16 +444,20 @@ footer{background:var(--noche);color:#C9D3F0;padding:30px 0;font-size:15px;text-
   </div>
 </section>
 
-<section class="final" id="inscripcion">
+<section class="final oscuro" id="inscripcion">
+  <img class="deco deco-m" src="img/dalia-2.png" alt="" style="left:2%;bottom:40px;width:250px;transform:rotate(-8deg)">
+  <img class="deco deco-m" src="img/peonia-2.png" alt="" style="right:3%;top:40px;width:200px;transform:rotate(10deg)">
   <div class="wrap">
+    <span class="tag" style="margin-bottom:30px">✱ Código de la Vid</span>
     <h2>No vinimos a exigirnos más. Vinimos a cuidarnos mejor.</h2>
-    <p class="lead" style="color:#EAF0DC">Los cupos son limitados para que cada una tenga su espacio.</p>
+    <p class="lead">Los cupos son limitados para que cada una tenga su espacio.</p>
     <a class="btn btn-claro" href="#inscripcion" data-wa>Reservar mi cupo por WhatsApp</a>
     <div class="datos">
-      <div><b data-cfg="fecha"></b>Fecha</div>
-      <div><b data-cfg="hora"></b>Hora</div>
-      <div><b data-cfg="lugar"></b>Lugar</div>
-      <div><b data-cfg="precio"></b>Inversión</div>
+      <div class="dato"><small>Fecha</small><b data-cfg="fecha"></b></div>
+      <div class="dato"><small>Hora</small><b data-cfg="hora"></b></div>
+      <div class="dato ancho"><small>Lugar</small><b data-cfg="lugar"></b></div>
+      <div class="dato"><small>Inversión</small><b data-cfg="precio"></b></div>
+      <div class="dato"><small>Incluye</small><b data-cfg="incluye"></b></div>
     </div>
   </div>
 </section>
@@ -448,23 +465,25 @@ footer{background:var(--noche);color:#C9D3F0;padding:30px 0;font-size:15px;text-
 
 <footer><div class="wrap">Código de la Vid · Taller 1: Tu cuerpo habla, ¡escúchalo! · <span data-cfg="organiza"></span></div></footer>
 
-<div class="barra"><span><b data-cfg="fecha" data-vacio="Taller de 3 horas"></b></span><a class="btn" href="#inscripcion" data-wa>Quiero mi cupo</a></div>
+<div class="barra"><span data-cfg="fecha" data-vacio="Taller de 3 horas"></span><a class="btn" href="#inscripcion" data-wa>Quiero mi cupo</a></div>
 
 <script>
-/* Datos del evento: completar y listo. Lo vacío se muestra como [pendiente]. */
+/* Datos del evento. Lo vacío se oculta; completar whatsapp cuando se tenga. */
 const EVENTO = {
-  fecha: "",          // ej. "Sábado 6 de diciembre"
-  hora: "",           // ej. "8:30 a. m. a 11:30 a. m."
-  lugar: "",          // ej. "Cali, salón …"
-  precio: "",         // ej. "$120.000"
-  organiza: "Casa Fuego de lo Alto · Iglesia Cristiana Cali",
+  fecha: "Sábado 5 de diciembre de 2026",
+  hora: "9:00 a. m. · duración 3 horas",
+  lugar: "Fuego de lo Alto · Iglesia Cristiana, Cra 88 #5-17, Cali",
+  precio: "$99.900 COP",
+  incluye: "Refrigerio y materiales de apoyo",
+  organiza: "Casa Fuego de lo Alto",
   whatsapp: "",       // solo números con indicativo, ej. "573001234567"
   mensaje: "Hola, quiero reservar mi cupo para el taller Tu cuerpo habla, ¡escúchalo!"
 };
 document.querySelectorAll("[data-cfg]").forEach(el => {
   const v = EVENTO[el.dataset.cfg];
   if (v) el.textContent = v;
-  else { el.textContent = el.dataset.vacio || "Por confirmar"; }
+  else if (el.dataset.vacio) el.textContent = el.dataset.vacio;
+  else { const w = el.closest(".dato"); if (w) w.remove(); else el.remove(); }
 });
 const IG = "https://www.instagram.com/casafuegodeloalto/";
 document.querySelectorAll("[data-wa]").forEach(a => { a.href = IG; a.target = "_blank"; a.rel = "noopener"; });
