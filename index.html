@@ -199,6 +199,12 @@ footer{background:var(--vino-2);color:var(--crema);padding:30px 0;font-size:17px
   .barra .btn{white-space:nowrap;padding:12px 22px;font-size:17px;background:var(--rosa-card);color:var(--vino)}
   footer{padding-bottom:90px}
 }
+.video-vid{background:var(--rosa);padding:90px 0;text-align:center}
+.video-vid h2{font-size:clamp(40px,5vw,64px);margin-bottom:12px}
+.video-vid .lead{color:var(--vino);margin:0 auto 34px;max-width:40ch}
+.video-marco{max-width:900px;margin:0 auto;border:3px solid var(--vino);border-radius:28px;overflow:hidden;background:var(--vino);box-shadow:0 18px 40px rgba(76,28,44,.18)}
+.video-marco video{display:block;width:100%;height:auto;aspect-ratio:16/9}
+@media (max-width:640px){.video-vid{padding:64px 0}.video-marco{border-radius:18px}}
 </style>
 </head>
 <body>
@@ -440,6 +446,18 @@ footer{background:var(--vino-2);color:var(--crema);padding:30px 0;font-size:17px
         <li>Ganas de regalarte tres horas</li>
       </ul>
       <p class="aviso">Este taller es un espacio educativo y de crecimiento. No reemplaza la atención médica ni psicológica.</p>
+    </div>
+  </div>
+</section>
+
+<section class="video-vid" id="video">
+  <div class="wrap">
+    <h2>¿Qué es el Código de la Vid?</h2>
+    <p class="lead">María Fernanda te lo cuenta en un minuto.</p>
+    <div class="video-marco">
+      <video controls playsinline preload="none" poster="video/codigo-de-la-vid.jpg">
+        <source src="video/codigo-de-la-vid.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
